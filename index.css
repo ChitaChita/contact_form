@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 section article{
-	margin:0;
+  margin:0;
 }
 
 .header__float {
@@ -22,6 +22,7 @@ section article{
   float: right;
   padding-top: 0;
   padding-bottom: 0;
+  padding-right: 2%;
 }
 #open-time {
   line-height: 60px;
@@ -42,7 +43,9 @@ header {
   
   width: 100%;
   display: flex;
-	margin:0;
+  margin:0;
+  position: relative;
+  z-index: 10;
 }
 
 footer{
@@ -68,13 +71,114 @@ ul {
   margin:0;
 }
 
+
 .top-pic {
+  text-align: center;
+  justify-content: center;
   width: 100%;
   height: 50vw;
+  background-color:#c2c2FF;
+  margin:0;
+  position: relative;
+  z-index: 1;
+}
+.top-bg {
   background-image: url(../contact_form/img/back-image.jpg);
   background-size: cover;
-	margin:0;
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 50vw;
+  margin:0;
+  position: relative;
+  z-index: 2;
+  animation-name: bg-transition; 
+  animation-duration: 4s; 
+  animation-iteration-count:2;
+  animation-fill-mode: forwards; 
+  animation-iteration-count:infinite;
 }
+@keyframes bg-transition {
+0% {
+  opacity: 0;
+}
+
+100% {
+  opacity: 1;
+} 
+}
+
+.circle {
+  width: 512px;
+  height:512px;
+  border-radius: 50%;
+  background-color:#23FF23;
+  z-index: 3;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  transform: scale(0);
+    animation-name:circleToBig;
+    animation-duration:4s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+}
+@keyframes circleToBig{
+  0%{
+    opacity: 1;
+    transform: scale(0); 
+  }
+  50% {
+    opacity: 1;
+    transform: scale(4);    
+
+   }
+  100%{
+  opacity: 0;
+  transform: scale(4);    
+  }
+}
+
+.welcome {
+  position: relative;
+  z-index: 10;
+  display: table-cell;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size:7vw;
+  color:#fff;
+  opacity:0;
+  animation-name: welcomination; 
+  animation-duration: 4s; 
+  animation-fill-mode: forwards; 
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+}
+@keyframes welcomination {
+0% {
+  opacity: 0;
+  color:#fff;
+  transform: translateY(30px);
+}
+50% {
+  opacity: 1;
+  color:#fff;
+  transform: translateY(0);
+}
+90% {
+  opacity: 1;
+  color:#fff;
+  transform: translateY(0);
+}
+ 100% {
+  opacity: 0;
+  color:#fff;
+  transform: translateY(-30px);
+} 
+}
+
 .menu-bar {
   width: 100%;
   background:red;
@@ -84,6 +188,8 @@ ul {
   text-align: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  position: relative;
+  z-index: 10;
 }
 .menu-bar h2 {
   font-size: 2em;
@@ -110,6 +216,8 @@ ul {
   background:#23FF23;
   margin:0;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 .pasta-menu h3 {
   font-size: 1.5em;
@@ -127,6 +235,8 @@ ul {
   background:#FFFF23;
   margin:0;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 .pizza-menu h3 {
   font-size: 1.5em;
@@ -143,6 +253,7 @@ ul {
   background:#c2c2FF;
   margin:0;
   text-align: center;
+  z-index: 3;
 }
 .access-route h2 {
   font-size: 2em;
@@ -176,5 +287,3 @@ ul {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-
-/* font-family: 'Playfair Display', serif; */
