@@ -94,7 +94,6 @@ ul {
   z-index: 2;
   animation-name: bg-transition; 
   animation-duration: 4s; 
-  animation-iteration-count:2;
   animation-fill-mode: forwards; 
   animation-iteration-count:infinite;
 }
