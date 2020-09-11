@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin:0;
+  padding: 0;
+}
+section {
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.form-title{
+  text-align: center;
+  justify-content: center;
+  background: 
+  linear-gradient(
+    to bottom, 
+  red, 
+  #c00000 30%,
+  red);
+  color: white;
+  border-radius: 10px 10px 0 0 / 10px 10px 0 0;
+  margin: 0 auto;
+  width: 560px;
+  position: relative;
+}
+.form-title h3 {
+  margin: 0;
+  padding:5px 0px 5px 0px;
+}
+
+form {
+  font-size: 19px;
+  background-color: grey;
+  margin: 0 auto;
+  width: 560px;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding:0px 0px 20px 0px;
+  margin: 0;
+}
+
+form li {
+  padding: 3px 0px 3px 0px;
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+  width: 8em;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+}
+.name-space {
+  width: 8em;
+}
+.long-column {
+  width: 22em;
+}
+.tel-num {
+  width: 4em;
+}
+#mail1 {
+  width: 3em;
+}
+#mail2 {
+  width: 4em;
+}
+#placement {
+  text-align: right;
+  padding-right: 4%;
+}
+.btn-area {
+  margin:0 auto;
+  text-align: center;
+  width: 60%;
+}
+
+#submit-btn {
+  width: 30%;
+  margin-right: 10%;
+}
+#close-btn {
+  width: 30%;
+  margin-left: 10%;
+}
+input #email-confirm {
+  padding-bottom: 3px;
+}
+
+
+input, textarea {
+  font: 19px;
+}
+
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  width: 22em;
+  height: 6em;
+}

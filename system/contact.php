@@ -4,59 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <title>お問い合わせフォーム</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
   <script type="text/javascript" src="contact.js"></script>
 </head>
 
 <body>
-  <div>
-    <h1>Company Name</h1>
-  </div>
-  <div>
-    <h2>お問い合わせ</h2>
-  </div>
-  <div>
+
+  <section>
+    <div class="form-title">
+      <h3>お問い合わせフォーム</h3>
+    </div>
     <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
-      <h1 class="contact-title">お問い合わせ 内容入力</h1>
-      <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
-      <div>
-        <div>
-          <label>お名前<span>必須</span></label>
-          <input type="text" name="name" placeholder="例）山田太郎" value="">
-        </div>
-        <div>
-          <label>ふりがな<span>必須</span></label>
-          <input type="text" name="furigana" placeholder="例）やまだたろう" value="">
-        </div>
-        <div>
-          <label>メールアドレス<span>必須</span></label>
-          <input type="text" name="email" placeholder="例）guest@example.com" value="">
-        </div>
-        <div>
-          <label>電話番号<span>必須</span></label>
-          <input type="text" name="tel" placeholder="例）0000000000" value="">
-        </div>
-        <div>
-          <label>性別<span>必須</span></label>
-          <input type="radio" name="sex" value="男性" checked> 男性
-          <input type="radio" name="sex" value="女性"> 女性
-        </div>
-        <div>
-          <label>お問い合わせ項目<span>必須</span></label>
-          <select name="item">
-            <option value="">お問い合わせ項目を選択してください</option>
-            <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-            <option value="ご意見・ご感想">ご意見・ご感想</option>
-          </select>
-        </div>
-        <div>
-          <label>お問い合わせ内容<span>必須</span></label>
-          <textarea name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
-        </div>
-      </div>
-      <button type="submit">確認画面へ</button>
+      <ul>
+        <li>
+          <span>お名前</span>
+          <label for="l-name">氏：</label>
+          <input class="name-space" id="l-name" type="text" name="last-name" value="">
+          <label for="f-name">名：</label>
+          <input class="name-space" id="f-name" type="text" name="first-name" value="">
+        </li>
+        <li>
+          <span>フリガナ</span>
+          <label for="l-furigana">氏：</label>
+          <input class="name-space" id="l-furigana" type="text" name="last-furigana" value="">
+          <label for="f-furigana">名：</label>
+          <input class="name-space" id="f-furigana" type="text" name="first-furigana" value="">
+        </li>
+        <li>
+          <span>住所</span>
+          <label for="mail1">〒</label>
+          <input id="mail1" type="number" name="mail1" value="">
+          <label for="mail2">ー</label>
+          <input id="mail2" type="number" name="mail2" value="">
+        </li>
+        <li id="placement">
+          <input class="long-column" id="address" type="text" name="address" value="">
+        </li>
+        <li>
+          <span>電話番号</span>
+          <label for="tel1"></label>
+          <input class="tel-num" id="tel1" type="tel" name="tel1" value="">
+          <label for="tel2">ー</label>
+          <input class="tel-num" id="tel2" type="tel" name="tel2" value="">
+          <label for="tel3">ー</label>
+          <input class="tel-num" id="tel3" type="tel" name="tel3" value="">
+        </li>
+        <li>
+          <span>メールアドレス</span>
+          <input class="long-column" id="email" type="email" name="email" value="" 　required>
+        </li>
+        <li>
+          <span>メールアドレス(確認)</span>
+          <input class="long-column" id="email-confirm" type="email" name="email-confirm" value="" required>
+        </li>
+        <li>
+          <span>質問内容</span>
+          <textarea name="content" rows="5"></textarea>
+        </li>
+        <li>
+          <div class="btn-area">
+            <button id="submit-btn" type="submit">送信</button>
+            <button id="close-btn" type="button">閉じる×</button>
+          </div>
+        </li>
+      </ul>
     </form>
-  </div>
+  </section>
+
 </body>
 
 </html>
