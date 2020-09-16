@@ -90,7 +90,23 @@
       <p>杜王町駅から西口から徒歩7分</p>
       <img src="../contact_form/img/map.jpg" alt="マップpic">
       <h2>お問い合わせはこちらから</h2>
-      <button id="contact-button">お問い合わせフォーム</button>
+
+      <div class="pop-box">
+        <label for="popup-on">
+          <label for="popup-on">
+            <div class="btn-open">
+              <button class="btn-open" id="contact-button">お問い合わせフォーム</button>
+            </div>
+          </label>
+          <input type="checkbox" id="popup-on">
+          <div class="popup">
+            <label for="popup-on">
+              <div class="popup-content">
+                <iframe src="./system/contact.php" alt="" class="layer-img" frameborder="0"></iframe>
+              </div>
+            </label>
+          </div>
+      </div>
     </section>
     <footer>
       <p>Trussardi</p>
