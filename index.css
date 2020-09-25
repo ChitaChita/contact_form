@@ -71,7 +71,6 @@ ul {
   margin:0;
 }
 
-
 .top-pic {
   text-align: center;
   justify-content: center;
@@ -288,77 +287,206 @@ ul {
   margin-bottom: 50px;
 }
 
-
-
-/* 全体設定 */
-* {
-  box-sizing: border-box;
+/* お問い合わせフォーム　ここから */
+div.contact-background {
+  background-color:rgba(255,255,255,0.7);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+div.form-title{
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px 10px 0 0 / 10px 10px 0 0;
+  margin: 0 auto;
+  position: relative;
+}
+div.form-title h3{
+	color:#fff;
+	background: -moz-linear-gradient(to bottom,red,#c00000 30%,red);
+  	background: -webkit-linear-gradient(to bottom,red,#c00000 30%,red);
+  	background: linear-gradient(to bottom,red,#c00000 30%,red);
+  	padding:1em 0 1em 0;
+  	border-radius: 10px 10px 0 0;
+}
+@media screen and (min-width:951px) {
+  .form-title {
+    width: 560px;
   }
-
-/* ポップアップウインドウの設定 */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  z-index: 30;
 }
-/* チェックボックスの初期設定 */
-#popup-on{
-  display: none;
+@media screen and (min-width: 769px) and (max-width: 950px) {
+  .form-title {
+    width: 60%;
+  }
 }
-/* チェックされたらポップアップウインドウを開く */
-#popup-on:checked + .popup{
-  display: block;
+@media screen and (max-width: 768px) {
+  .form-title {
+    width: 90%;
+  }
 }
-
-/* 閉じるアイコン（右上） */
-.icon-close{
-  background: #000;
-  color: #fff;
-  font-size: 30px;
-  padding: 0 10px;
-  position: absolute;
-  right: 0;
+table {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+td {
+  padding: 2% 0 2% 0;
+}
+.form-title h3 {
+  margin: 0;
+  padding:2% 0 2% 0;
 }
 
-/* 閉じるボタン */
-.btn-close{
-  background: #000;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-  width: 95%;
+.btn-area {
+  margin:0 auto;
   text-align: center;
+  width: 60%;
+  padding: 3% 0 3% 0;
+}
+@media screen and (min-width:769px) {
+  .btn {
+    width: 30%;
+  }
+}
+@media screen and (max-width:768px) {
+  .btn {
+    width: 40%;
+  }
+}
+@media screen and (min-width:951px) {
+  .btn {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width:950px) {
+  .btn {
+    font-size: 2vw;
+  }
+}
+#submit-btn {
+  margin-right: 10%;
+}
+#close-btn {
+  margin-left: 10%;
 }
 
-/* 開くボタン */
-/* .btn-open{
-  background: #fff;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-  width: 95%;
+form {
+  background-color: #dbdbdb;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+}
+@media screen and (min-width:951px) {
+  form {
+    width: 560px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 950px) {
+  form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+}
+input#address.long-column {
+  margin-top: 2%;
+}
+input, textarea {
+  border: 0;
+  padding: 0;
+}
+@media screen and (min-width: 951px) {
+  input, textarea, label, .item-name  {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 950px) {
+  input, textarea, label, .item-name  {
+    font-size: 2vw;
+  }
+}
+
+.item-name {
+  flex: initial;
   text-align: center;
-} */
-
-/* ポップアップの内容 */
-.popup-content{
-  margin: 40px auto 40px auto;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
 }
-.layer-img {
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 769px) {
+  .item-name  {
+    width: 8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item-name  {
+    width: 5em;
+  }
+}
+
+.name-space {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 769px) {
+  .name-space  {
+    width: 8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .name-space  {
+    width: 5.7em;
+  }
+}
+.long-column {
+  width: 90%;
+}
+.tel-num {
+  width: 4em;
+}
+#mail1 {
+  width: 3em;
+}
+#mail2 {
+  width: 4em;
+}
+#placement {
+  text-align: right;
+  padding-right: 4%;
+}
+textarea {
+  vertical-align: top;
+  width: 90%;
+  height: 6em;
+}
+
+/* 受け付け画面表示　ここから */
+div.accept{
+	display: none;
+	text-align: center;
+	top: 25vh;
+	position: absolute;
+}
+div.accept h2{
+	color: #fff;
+	font-size: 57px;
+}
+#contact-background.accepts{
+	background-color: rgba(0,0,0,0.7);
+	
+}
+div.accept button{
+	font-size: 33.25px;
+	padding:0.1em 0 0.5em 0;
+	border-radius: 19px;
+	margin: 47.5px;
+	
 }
