@@ -18,8 +18,8 @@
         <h1>Trussardi</h1>
         <nav>
           <ul>
-            <li id="open-time" style="font-size:1em">営業時間：11:00 〜 21:00</li>
-            <li id="tel-num" style="font-size:1em">TEL：○○○-○○○-○○○○</li>
+            <li id="open-time">営業時間：11:00 〜 21:00</li>
+            <li id="tel-num">TEL：○○○-○○○-○○○○</li>
           </ul>
         </nav>
       </div>
@@ -30,52 +30,52 @@
         <div class="contact-form">
           <div class="form-title">
             <h3>お問い合わせフォーム</h3>
-            <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
+            <form action="./system/contact.php" method="post" name="contactForm">
               <table id="form-items">
                 <tbody>
                   <tr>
                     <td class="item-name">お名前</td>
                     <td>
                       <label for="l-name">氏：</label>
-                      <input class="name-space" id="l-name" type="text" name="last-name" value="">
+                      <input class="name-space" id="l-name" type="text" name="lastName" value="" required>
                       <label for="f-name">名：</label>
-                      <input class="name-space" id="f-name" type="text" name="first-name" value="">
+                      <input class="name-space" id="f-name" type="text" name="firstName" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">フリガナ</td>
                     <td>
                       <label for="l-furigana">氏：</label>
-                      <input class="name-space" id="l-furigana" type="text" name="last-furigana" value="">
+                      <input class="name-space" id="l-furigana" type="text" name="lastFurigana" value="" required>
                       <label for="f-furigana">名：</label>
-                      <input class="name-space" id="f-furigana" type="text" name="first-furigana" value="">
+                      <input class="name-space" id="f-furigana" type="text" name="firstFurigana" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">住所</td>
                     <td>
-                      <label for="mail1">〒</label>
-                      <input id="mail1" type="number" name="mail1" value="">
-                      <label for="mail2">ー</label>
-                      <input id="mail2" type="number" name="mail2" value="">
-                      <input class="long-column" id="address" type="text" name="address" value="">
+                      <label for="firstpostal">〒</label>
+                      <input id="firstpostal" type="number" name="firstpostal" value="" required>
+                      <label for="secondpostal">ー</label>
+                      <input id="secondpostal" type="number" name="secondpostal" value="" required>
+                      <input class="long-column" id="address" type="text" name="address" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">電話番号</td>
                     <td>
-                      <label for="tel1"></label>
-                      <input class="tel-num" id="tel1" type="tel" name="tel1" value="">
-                      <label for="tel2">ー</label>
-                      <input class="tel-num" id="tel2" type="tel" name="tel2" value="">
-                      <label for="tel3">ー</label>
-                      <input class="tel-num" id="tel3" type="tel" name="tel3" value="">
+                      <label for="firstphone"></label>
+                      <input class="tel-num" id="firstphone" type="tel" name="firstphone" value="" required>
+                      <label for="secondphone">ー</label>
+                      <input class="tel-num" id="secondphone" type="tel" name="secondphone" value="" required>
+                      <label for="thirdphone">ー</label>
+                      <input class="tel-num" id="thirdphone" type="tel" name="thirdphone" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">メールアドレス</td>
                     <td>
-                      <input class="long-column" id="email" type="email" name="email" value="" 　required>
+                      <input class="long-column" id="email" type="email" name="mail" value="" 　required>
                     </td>
                   </tr>
                   <tr>
@@ -87,7 +87,7 @@
                   <tr>
                     <td class="item-name">質問内容</td>
                     <td>
-                      <textarea name="content"></textarea>
+                      <textarea id="message" name="message" required></textarea>
                     </td>
                   </tr>
                 </tbody>
@@ -118,7 +118,7 @@
       </article>
       <article class="pasta-menu">
         <h3>パスタ</h3>
-        <img src="../contact_form/img/pasta.jpg" alt="パスタpic">
+        <img src="./img/pasta.jpg" alt="パスタpic">
         <nav>
           <ul class="menu-list">
             <div>
@@ -146,7 +146,7 @@
       </article>
       <article class="pizza-menu">
         <h3>ピザ</h3>
-        <img src="../contact_form/img/pizza.jpg" alt="ピザpic">
+        <img src="./img/pizza.jpg" alt="ピザpic">
         <nav>
           <ul class="menu-list">
             <div>
@@ -172,7 +172,7 @@
     <section class="access-route">
       <h2>アクセス</h2>
       <p>杜王町駅から西口から徒歩7分</p>
-      <img src="../contact_form/img/map.jpg" alt="マップpic">
+      <img src="./img/map.jpg" alt="マップpic">
       <h2>お問い合わせはこちらから</h2>
       <button class="btn-open" id="contact-button">お問い合わせフォーム</button>
     </section>

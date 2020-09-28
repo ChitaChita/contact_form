@@ -8,29 +8,6 @@ section article{
   margin:0;
 }
 
-.header__float {
-  width: 100%;
-  clear: both;
-}
-.header__float h1 {
-  float: left;
-  line-height: 102px;
-  margin:0;
-  padding-left: 2%;
-}
-.header__float nav {
-  float: right;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 2%;
-}
-#open-time {
-  line-height: 60px;
-}
-#tel-num {
-  line-height: 0px;
-}
-
 header {
   height: 102.35px;
   background:
@@ -47,6 +24,51 @@ header {
   position: relative;
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  header  {
+    height: 15vw;
+  }
+}
+.header__float {
+  width: 100%;
+  clear: both;
+}
+.header__float h1 {
+  float: left;
+  line-height: 102px;
+  margin:0;
+  padding-left: 2%;
+}
+@media screen and (max-width: 768px) {
+  .header__float h1 {
+    line-height: 13vw;
+    font-size: 6vw;
+    margin:0;
+    padding-left: 2%;
+  }
+}
+.header__float nav {
+  float: right;
+  padding-top: 2%;
+  padding-bottom: 0;
+  padding-right: 2%;
+}
+#open-time {
+  font-size: 1em;
+}
+@media all and (max-width: 768px) {
+  #open-time {
+    font-size: 3vw;
+  }
+}
+#tel-num {
+  font-size: 1em;
+}
+@media all and (max-width: 768px) {
+  #tel-num {
+    font-size: 3vw;
+  }
+}
 
 footer{
   height: 51.2px;
@@ -54,10 +76,21 @@ footer{
   text-align: center;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  footer {
+    height: 10vw;
+    display: inline-table;
+  }
+}
 footer p {
   line-height: 48px;
   font-size: 20px;
 	margin:0;
+}
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 3vw;
+  }
 }
 
 nav {
@@ -82,7 +115,7 @@ ul {
   z-index: 1;
 }
 .top-bg {
-  background-image: url(../contact_form/img/back-image.jpg);
+  background-image: url(./img/back-image.jpg);
   background-size: cover;
   display: table;
   text-align: center;
@@ -194,7 +227,11 @@ ul {
   font-size: 2em;
   margin:0;
 }
-
+@media screen and (max-width: 768px) {
+  .menu-bar h2 {
+    font-size: 5.5vw;
+  }
+}
 .menu-list {
   width: 500px;
   font-size: 20px;
@@ -206,9 +243,19 @@ ul {
   padding-left: 0;
   padding-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .menu-list {
+    font-size: 4.5vw;
+  }
+}
 .menu-list div {
   width: 50%;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .menu-list div {
+    width: 100%;
+  }
 }
 .pasta-menu {
   width: 100%;
@@ -224,9 +271,20 @@ ul {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.pasta-menu img{
+@media screen and (max-width: 768px) {
+  .pasta-menu h3 {
+    font-size: 5.5vw;
+  }
+}
+.pasta-menu img {
   width: 500px;
   height: 300px;
+}
+@media screen and (max-width: 768px) {
+  .pasta-menu img {
+    width: 80%;
+    height: auto;
+  }
 }
 
 .pizza-menu {
@@ -243,11 +301,21 @@ ul {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.pizza-menu img{
+@media screen and (max-width: 768px) {
+  .pizza-menu h3 {
+    font-size: 5vw;
+  }
+}
+.pizza-menu img {
   width: 500px;
   height: 300px;
 }
-
+@media screen and (max-width: 768px) {
+  .pizza-menu img {
+    width: 80%;
+    height: auto;
+  }
+}
 .access-route{
   background:#c2c2FF;
   margin:0;
@@ -260,17 +328,33 @@ ul {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+@media screen and (max-width: 768px) {
+  .access-route h2 {
+    font-size: 5vw;
+  }
+}
 .access-route p {
   font-size: 1.3em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+@media screen and (max-width: 768px) {
+  .access-route p {
+    font-size: 4.5vw;
+  }
+}
 .access-route img {
   width: 600px;
   height: auto;  
 }
+@media screen and (max-width: 768px) {
+  .access-route img {
+    width: 90%;
+    height: auto;
+  }
+}
 
-#contact-button{
+#contact-button {
   width: 350px;
   height: 50px;
   border-radius: 10px;border: 0;
@@ -285,6 +369,13 @@ ul {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  #contact-button {
+    width: 60vw;
+    height: 10vw;
+    font-size: 5vw;
+  }
 }
 
 /* お問い合わせフォーム　ここから */
@@ -452,10 +543,10 @@ input, textarea {
 .tel-num {
   width: 4em;
 }
-#mail1 {
+#firstpostal {
   width: 3em;
 }
-#mail2 {
+#secondpostal {
   width: 4em;
 }
 #placement {
