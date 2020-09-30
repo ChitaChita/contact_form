@@ -30,6 +30,7 @@
         <div class="contact-form">
           <div class="form-title">
             <h3>お問い合わせフォーム</h3>
+          </div>
             <form action="./system/contact.php" method="post" name="contactForm">
               <table id="form-items">
                 <tbody>
@@ -54,34 +55,34 @@
                   <tr>
                     <td class="item-name">住所</td>
                     <td>
-                      <label for="firstpostal">〒</label>
-                      <input id="firstpostal" type="number" name="firstpostal" value="" required>
-                      <label for="secondpostal">ー</label>
-                      <input id="secondpostal" type="number" name="secondpostal" value="" required>
-                      <input class="long-column" id="address" type="text" name="address" value="" required>
+                      <label for="firstPostal">〒</label>
+                      <input id="firstPostal" type="number" name="firstPostal" value="" required>
+                      <label for="secondPostal">ー</label>
+                      <input id="secondPostal" type="number" name="secondPostal" value="" required>
+                      <input class="other-column" id="address" type="text" name="address" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">電話番号</td>
                     <td>
-                      <label for="firstphone"></label>
-                      <input class="tel-num" id="firstphone" type="tel" name="firstphone" value="" required>
-                      <label for="secondphone">ー</label>
-                      <input class="tel-num" id="secondphone" type="tel" name="secondphone" value="" required>
-                      <label for="thirdphone">ー</label>
-                      <input class="tel-num" id="thirdphone" type="tel" name="thirdphone" value="" required>
+                      <label for="firstPhone"></label>
+                      <input class="tel-num" id="firstPhone" type="tel" name="firstPhone" value="" required>
+                      <label for="secondPhone">ー</label>
+                      <input class="tel-num" id="secondPhone" type="tel" name="secondPhone" value="" required>
+                      <label for="thirdPhone">ー</label>
+                      <input class="tel-num" id="thirdPhone" type="tel" name="thirdPhone" value="" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">メールアドレス</td>
                     <td>
-                      <input class="long-column" id="email" type="email" name="mail" value="" 　required>
+                      <input class="other-column" id="mail" type="email" name="mail" value="" 　required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">メールアドレス(確認)</td>
                     <td>
-                      <input class="long-column" id="email-confirm" type="email" name="email-confirm" value="" required>
+                      <input class="other-column" id="emailConfirm" type="email" name="emailConfirm" value="" required>
                     </td>
                   </tr>
                   <tr>
@@ -97,7 +98,6 @@
                 <button class="btn" id="close-btn" type="button">閉じる×</button>
               </div>
             </form>
-          </div>
         </div>
         <div class="accept">
           <h2>質問受け付けました</h2>
@@ -181,5 +181,4 @@
     </footer>
   </main>
 </body>
-
 </html>
