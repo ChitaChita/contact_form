@@ -38,51 +38,51 @@
                     <td class="item-name">お名前</td>
                     <td>
                       <label for="l-name">氏：</label>
-                      <input class="name-space" id="l-name" type="text" name="lastName" value="" required>
+                      <input class="name-space" id="l-name" type="text" name="lastName" required>
                       <label for="f-name">名：</label>
-                      <input class="name-space" id="f-name" type="text" name="firstName" value="" required>
+                      <input class="name-space" id="f-name" type="text" name="firstName" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">フリガナ</td>
                     <td>
                       <label for="l-furigana">氏：</label>
-                      <input class="name-space" id="l-furigana" type="text" name="lastFurigana" value="" required>
+                      <input class="name-space" id="l-furigana" type="text" name="lastFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
                       <label for="f-furigana">名：</label>
-                      <input class="name-space" id="f-furigana" type="text" name="firstFurigana" value="" required>
+                      <input class="name-space" id="f-furigana" type="text" name="firstFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">住所</td>
                     <td>
                       <label for="firstPostal">〒</label>
-                      <input id="firstPostal" type="number" name="firstPostal" value="" required>
+                      <input id="firstPostal" type="number" name="firstPostal"　pattern="\d{3}" required>
                       <label for="secondPostal">ー</label>
-                      <input id="secondPostal" type="number" name="secondPostal" value="" required>
-                      <input class="other-column" id="address" type="text" name="address" value="" required>
+                      <input id="secondPostal" type="number" name="secondPostal"　pattern="\d{4}" required>
+                      <input class="other-column" id="address" type="text" name="address" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">電話番号</td>
                     <td>
                       <label for="firstPhone"></label>
-                      <input class="tel-num" id="firstPhone" type="tel" name="firstPhone" value="" required>
+                      <input class="tel-num" id="firstPhone" type="tel" name="firstPhone"　pattern="\d{2,4}" required>
                       <label for="secondPhone">ー</label>
-                      <input class="tel-num" id="secondPhone" type="tel" name="secondPhone" value="" required>
+                      <input class="tel-num" id="secondPhone" type="tel" name="secondPhone"　pattern="\d{2,4}" required>
                       <label for="thirdPhone">ー</label>
-                      <input class="tel-num" id="thirdPhone" type="tel" name="thirdPhone" value="" required>
+                      <input class="tel-num" id="thirdPhone" type="tel" name="thirdPhone"　pattern="\d{3,4}" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">メールアドレス</td>
                     <td>
-                      <input class="other-column" id="mail" type="email" name="mail" value="" 　required>
+                      <input class="other-column" id="mail" type="email" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">メールアドレス(確認)</td>
                     <td>
-                      <input class="other-column" id="emailConfirm" type="email" name="emailConfirm" value="" required>
+                      <input class="other-column" id="emailConfirm" type="text" name="emailConfirm" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                     </td>
                   </tr>
                   <tr>
@@ -101,7 +101,7 @@
         </div>
         <div class="accept">
           <h2>質問受け付けました</h2>
-          <button>閉じる×</button>
+          <button id="btn-close">閉じる×</button>
         </div>
       </div>
     </section>
