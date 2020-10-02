@@ -37,19 +37,19 @@
                   <tr>
                     <td class="item-name">お名前</td>
                     <td>
-                      <label for="l-name">氏：</label>
-                      <input class="name-space" id="l-name" type="text" name="lastName" required>
-                      <label for="f-name">名：</label>
-                      <input class="name-space" id="f-name" type="text" name="firstName" required>
+                      <label for="lastName">氏：</label>
+                      <input class="name-space" id="lastName" type="text" name="lastName" required>
+                      <label for="firstName">名：</label>
+                      <input class="name-space" id="firstName" type="text" name="firstName" required>
                     </td>
                   </tr>
                   <tr>
                     <td class="item-name">フリガナ</td>
                     <td>
-                      <label for="l-furigana">氏：</label>
-                      <input class="name-space" id="l-furigana" type="text" name="lastFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
-                      <label for="f-furigana">名：</label>
-                      <input class="name-space" id="f-furigana" type="text" name="firstFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
+                      <label for="lastFurigana">氏：</label>
+                      <input class="name-space" id="lastFurigana" type="text" name="lastFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
+                      <label for="firstFurigana"">名：</label>
+                      <input class="name-space" id="firstFurigana"" type="text" name="firstFurigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
                     </td>
                   </tr>
                   <tr>
